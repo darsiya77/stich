@@ -1,0 +1,13 @@
+package Archive.Exception.Button;
+
+public class EventsApp {
+
+    public static void main(String[] args) {
+
+        Button button = new Button(new ButtonClickHandler());
+        button.click();
+        button.click();
+        button.click();
+    }
+}
+
