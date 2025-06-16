@@ -1,0 +1,10 @@
+Добавление SSH ключа.
+ ~/.ssh    - команда в Git Bash для проверки наличия SSH ключей
+
+1. Сгенерировал его через Git Bash. ssh-keygen -t ed25519 -C "your_email@example.com"
+2. Добавил ключ в SSH-agent.
+   -     eval "$(ssh-agent -s)" - Проверка запущен ли агент;
+   -     ssh-add ~/.ssh/id_ed25519 - Добавить SSH-ключи в агент;
+
+3. -     clip < ~/.ssh/id_ed25519.pub  -  Скопировал SSH public key;
+4. В настройках github в совей учетной записи в разделе "Настройки" -> SSH and GPG keys добавил публичный SSH ключ.
