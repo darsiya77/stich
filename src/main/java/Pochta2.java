@@ -1,6 +1,3 @@
-import java.util.regex.Matcher;
-import java.util.regex.Pattern;
-
 //https://www.youtube.com/watch?v=zKqBS577NOE&t=693s
 
 public class Pochta2 {
