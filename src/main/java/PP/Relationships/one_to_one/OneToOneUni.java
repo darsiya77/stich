@@ -1,19 +1,14 @@
-package JPA.CRUD;
+package PP.Relationships.one_to_one;
 
-import JPA.entity.Student;
+import PP.Relationships.one_to_one.entity.Passport;
+import PP.Relationships.one_to_one.entity.Student;
 
 import javax.persistence.EntityManager;
 import javax.persistence.EntityManagerFactory;
 import javax.persistence.EntityTransaction;
 import javax.persistence.Persistence;
 
-// EntityManager - недолго живущий объект, посредник для переговоров с БД. Всегда закрывать
-// если понадобится вновь - достаем EntityManager из EntityManagerFactory
-
-// когда обращаемся в БД надо вручную открывать и закрыватиь транзакцию
-
-public class Persist_ex {
-
+public class OneToOneUni {
     public static void main(String[] args) {
 
         EntityManagerFactory factory = Persistence
@@ -23,26 +18,32 @@ public class Persist_ex {
 
         EntityTransaction transaction = entityManager.getTransaction();
 
-        Student student = null;
 
         try {
             transaction.begin();
-            student = new Student("Андрей", "Троян", 4.8);
-            entityManager.persist(student);  // Сохраняет объект в БД
+
+            Student student1 = new Student("Sasha", "Whyte", 9.1);
+            Passport passport1 = new Passport("sashs.whyte@gmail.com", 174
+                    , "blue");
+            entityManager.persist(passport1);
+            entityManager.persist(student1);
+
             transaction.commit(); // закрываем транзакцию
-        } catch (Exception e) {
+        }
+        catch (Exception e) {
+
             if (transaction != null) {
                 transaction.rollback();
             }
             e.printStackTrace();
+
         } finally {
+
             if (entityManager != null) {
                 entityManager.close();
                 factory.close(); // закрываем только тогда когда больше не будем обращаться к БД
             }
-            System.out.println(student);
         }
 
     }
 }
-

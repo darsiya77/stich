@@ -1,3 +1,5 @@
+package Other;
+
 public class Okruglenie {
     public static void main(String[] args) {
         System.out.println(parseAndSqrt("12345"));

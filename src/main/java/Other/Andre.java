@@ -1,4 +1,6 @@
-public class Andrey {
+package Other;
+
+public class Andre {
 
     public static void main(String[] args) {
 

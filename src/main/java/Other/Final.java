@@ -1,3 +1,5 @@
+package Other;
+
 public class Final {
 
     public static boolean doubleExpression(double a, double b, double c) {

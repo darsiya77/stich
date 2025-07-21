@@ -1,3 +1,5 @@
+package Other;
+
 public class Equality {
     public static boolean doubleExpression(double a, double b, double c) {
         c = 0.0001;

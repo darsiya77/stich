@@ -1,3 +1,5 @@
+package Other;
+
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;  // https://youtu.be/zKqBS577NOE
 
@@ -6,7 +8,7 @@ import java.util.regex.Pattern;  // https://youtu.be/zKqBS577NOE
 // конструкция сравнения - Pattern pt = Pattern.compile("\\d+"); String s = '1998'; Matcher mt = pt.matcher(s)
 // метод .matcher - найти и сравнить; метод matches - возвращает буленовскую переменную
 
-public class Pochta {
+public class Mail {
     public static void main(String[] args) {
         System.out.println(isGmailOrOutlook("kata12@gmail.com"));
         System.out.println(isGmailOrOutlook("Andrey3@outlook.com"));

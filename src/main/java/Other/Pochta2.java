@@ -1,4 +1,4 @@
-//https://www.youtube.com/watch?v=zKqBS577NOE&t=693s
+package Other;//https://www.youtube.com/watch?v=zKqBS577NOE&t=693s
 
 public class Pochta2 {
     public static boolean isGmailOrOutlook(String email) {

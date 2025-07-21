@@ -5,7 +5,7 @@ import java.io.*;
 
 public class FileInputStream4 {
     public static void main(String[] args) throws IOException {
-        FileInputStream fin = new FileInputStream( "HelloAndreyT.txt");
+        FileInputStream fin = new FileInputStream("HelloAndreyT.txt");
         int i;
         while ((i = fin.read()) != -1) {
             System.out.print((char)i);

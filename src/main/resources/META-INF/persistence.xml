@@ -5,7 +5,10 @@
              https://jakarta.ee/xml/ns/persistence/persistence_3_0.xsd">
 
     <persistence-unit name="jpa-course">
+
 <!--        <class>JPA.entity.Student</class>-->
+<!--        <class>PP.Relationships.one_to_one.entity.Student</class>-->
+<!--        <class>PP.Relationships.one_to_one.entity.Passport</class>-->
         <properties>
             <!-- Настройки подключения к MySQL -->
             <property name="jakarta.persistence.jdbc.driver" value="com.mysql.cj.jdbc.Driver"/>
@@ -15,7 +18,7 @@
 
             <!-- Настройки Hibernate -->
             <property name="hibernate.dialect" value="org.hibernate.dialect.MySQL8Dialect"/>
-            <property name="hibernate.hbm2ddl.auto" value="update"/> <!-- update, create, validate, none -->
+<!--            <property name="hibernate.hbm2ddl.auto" value="update"/> &lt;!&ndash; update, create, validate, none &ndash;&gt;-->
             <property name="hibernate.show_sql" value="true"/>
             <property name="hibernate.format_sql" value="true"/>
         </properties>

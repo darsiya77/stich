@@ -1,3 +1,5 @@
+package Other;
+
 public class Radius {
 public static void calcCircleRadius(double area) {
     System.out.printf("%.3f", Math.sqrt(area / Math.PI));

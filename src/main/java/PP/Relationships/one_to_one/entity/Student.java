@@ -1,6 +1,7 @@
-package JPA.entity;
+package PP.Relationships.one_to_one.entity;
 
 import javax.persistence.*;
+import java.time.LocalDate;
 
 @Entity
 @Table(name = "students")  // Опционально: если имя таблицы отличается от имени класса
@@ -10,7 +11,7 @@ public class Student {
     @GeneratedValue(strategy = GenerationType.IDENTITY)  // Автоинкремент в MySQL
     private Long id;
 
-    @Column(name = "name", nullable = false)  // Поле NOT NULL в БД
+    @Column(name = "name")  // Поле NOT NULL в БД
     private String name;
 
     @Column(name = "surname", nullable = false)
@@ -18,6 +19,10 @@ public class Student {
 
     @Column(name = "avg_grade")  // Если имя столбца в БД отличается (snake_case)
     private Double avgGrade;
+
+    @OneToOne
+    @JoinColumn(name = "passport_id")
+    private Passport passport;
 
     // Конструкторы
     public Student() {
@@ -61,6 +66,14 @@ public class Student {
 
     public void setAvgGrade(Double avgGrade) {
         this.avgGrade = avgGrade;
+    }
+
+    public Passport getPassport() {
+        return passport;
+    }
+
+    public void setPassport(Passport passport) {
+        this.passport = passport;
     }
 
     // toString() для удобства отладки

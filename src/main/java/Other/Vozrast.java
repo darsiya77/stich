@@ -1,3 +1,5 @@
+package Other;
+
 public class Vozrast {
     public static byte getAgeDiff(byte age1, byte age2) {
 

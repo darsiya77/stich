@@ -21,7 +21,7 @@ public class SumOfStreamEx {
         System.out.println("int byteArrayInputStream = sumOfStream(byteStream): " + byteArrayInputStream);
 //        ______________________________________________________________________________
 // Создаем поток ввода fin с источником - файл hello.txt и применяем метод sumOfStream
-        FileInputStream fin = new FileInputStream( "hello.txt");       // FileInputStream - для считывания данных
+        FileInputStream fin = new FileInputStream("hello.txt");       // FileInputStream - для считывания данных
 
 
         int fileInputStream = sumOfStream(fin);
