@@ -22,11 +22,14 @@ public class OneToOneUni {
         try {
             transaction.begin();
 
-            Student student1 = new Student("Sasha", "Whyte", 9.1);
-            Passport passport1 = new Passport("sashs.whyte@gmail.com", 174
-                    , "blue");
-            entityManager.persist(passport1);
+            Student student1 = new Student("Julia", "Din", 8.7);
+            Passport passport1 = new Passport("Juliadin@gmail.com", 168
+                    , "green");
+            student1.setPassport(passport1);
+
             entityManager.persist(student1);
+            entityManager.persist(passport1);
+
 
             transaction.commit(); // закрываем транзакцию
         }

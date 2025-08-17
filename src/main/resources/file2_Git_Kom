@@ -25,3 +25,9 @@ git push -u origin <ветка>        # Отправить изменения в удалённый репозиторий 
 git push                          # Отправить изменения (после первого push)
 git pull                          # Получить изменения из удалённого репозитория
 git fetch                         # Загрузить изменения без слияния
+
+git init
+git commit -m "first commit"
+git branch -M main
+git remote add origin https://github.com/darsiya77/PP_2_1_4_spring-types-of-wiring.git
+git push -u origin main

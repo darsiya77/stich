@@ -3,7 +3,7 @@ package PP.Relationships.one_to_one.entity;
 import javax.persistence.*;
 
 @Entity
-@Table
+@Table(name = "passports")
 public class Passport {
 
     @Id
